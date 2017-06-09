@@ -1,12 +1,11 @@
 package main
 
 import (
-	"log"
+	_ "expanse/routers"
 
 	"github.com/astaxie/beego"
 )
 
 func main() {
 	beego.Run()
-	log.Println("wx expanse")
 }
