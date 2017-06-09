@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	go beego.Run()
+	beego.Run()
 	log.Println("wx expanse")
 }
