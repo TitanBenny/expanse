@@ -23,5 +23,7 @@ type WXController struct {
 func (c *WXController) Get() {
 	r := c.Ctx.Request
 	w := c.Ctx.ResponseWriter.ResponseWriter
+	appConfig := beego.AppConfig.String
+	weixin.Initialize(appConfig("originId"), appConfig("appId"), appConfig("appSecret"), appConfig("token"), appConfig("encodingAESKey"))
 	weixin.HandleAccess(w, r)
 }
